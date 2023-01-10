@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <div id="demo">
+    </div>
+    Name:
+    <div id="name">
+
+    </div>
+    Roll Number:
+    <div id="roll">
+        
+    </div>
+    Branch:
+    <div id="br">
+        
+    </div>
+
+    <!-- for creating the functions inside html -->
+     <script>
+        str=window.location.search
+        str=str.substring(1)
+        str1=str.split("&")
+        document.getElementById("name").innerHTML=str1[0].split("=")[1]
+        document.getElementById("roll").innerHTML=str1[1].split("=")[1]
+        document.getElementById("br").innerHTML=str1[2].split("=")[1]
+    document.getElementById("demo").innerHTML=str
+    </script>
+    </body>
+
+</html>
+
+<!-- get method -->
