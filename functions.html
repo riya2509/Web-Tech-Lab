@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+<style>
+    .menubutton{
+        color:red;
+        background-color: white;
+        border: 4px solid black ;
+        width: 200px;
+        height: 50px;
+        margin:10px;
+        border-radius: 16px;
+    }
+    #content1{
+        background-color: red;
+    }
+    #content2{
+        background-color: blue;
+    }
+    #content3{
+        background-color: green;
+    }
+</style>
+</head>
+<body>
+
+<table width=100% >
+    <tr>
+        <td colspan=2>
+            <h1>This is a Heading</h1></td>
+    </tr>
+    <tr>
+        <td width=20%>
+            <button class="menubutton" onclick="showContent('1')">Button 1</button>
+            <button class="menubutton" onclick="showContent('2')">Button 2</button>
+            <button class="menubutton" onclick="showContent('3')">Button 3</button>
+        </td>
+        <td width=80%>
+            <div id="content1" class='content' style="display: block"><h1>Content 1</h1></div>
+            <div id="content2" class='content' style="display: none"><h1>Content 2</h1></div>
+            <div id="content3" class='content' style="display: none"><h1>Content 3</h1></div>
+        </td>
+    </tr>
+</table>
+<script>
+    function showContent(c){
+
+        contents=document.getElementsByClassName('content');
+        for(i=0;i<contents.length;i++)
+        {
+            contents[i].style.display='none';
+        }
+        document.getElementById('content'.concat(c)).style.display='block';
+
+    }
+</script>
+<!-- <p>This is a paragraph.</p> -->
+
+</body>
+</html>
