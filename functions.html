@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- responsive website -->
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="icon" type="image" href="./KIIT_logo.svg.png">
 <title>Form</title>
 <style>
+    .buttondiv{
+        margin: 30px;
+        
+    }
     .menubutton{
         color:red;
         background-color: white;
@@ -11,6 +18,7 @@
         height: 50px;
         margin:10px;
         border-radius: 16px;
+        cursor: pointer;
     }
     #content1{
         background-color: red;
@@ -25,24 +33,38 @@
 </head>
 <body>
 
-<table width=100% >
-    <tr>
-        <td colspan=2>
-            <h1>This is a Heading</h1></td>
-    </tr>
-    <tr>
-        <td width=20%>
-            <button class="menubutton" onclick="showContent('1')">Button 1</button>
-            <button class="menubutton" onclick="showContent('2')">Button 2</button>
-            <button class="menubutton" onclick="showContent('3')">Button 3</button>
-        </td>
-        <td width=80%>
-            <div id="content1" class='content' style="display: block"><h1>Content 1</h1></div>
-            <div id="content2" class='content' style="display: none"><h1>Content 2</h1></div>
-            <div id="content3" class='content' style="display: none"><h1>Content 3</h1></div>
-        </td>
-    </tr>
-</table>
+        
+        <table width=100% border="5">
+            <tr>
+                <td colspan=2>
+                    <img src="./KIIT_logo.svg.png" width="4%"
+                    >
+                    <h1>This is a Table Form 
+
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td width=20%>
+                    <button class="menubutton" onclick="showContent('1')">Button 1</button>
+                    <button class="menubutton" onclick="showContent('2')">Button 2</button>
+                    <button class="menubutton" onclick="showContent('3')">Button 3</button>
+                </td>
+                <td width=80%>
+                    <div id="content1" class='content' style="display: block"><h1>Content 1</h1></div>
+                    <div id="content2" class='content' style="display: none"><h1>Content 2</h1></div>
+                    <div id="content3" class='content' style="display: none"><h1>Content 3</h1></div>
+                </td>
+            </tr>
+        </table>
+
+
+<div class="buttondiv">
+    
+    <button style="cursor: pointer;">Submit</button>
+    <button style="cursor: pointer;">Next</button>
+</div>
+
 <script>
     function showContent(c){
 
