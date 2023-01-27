@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+</head>
+<body>
+<h2>Form submitted, the values are: </h2><br>
+<div style="color: cadetblue;"><b><u>User Information</u></b></div>
+First Name:<div id="fname"></div>
+Last Name:<div id="lname"></div>
+Roll Number:<div id="roll"></div>
+<div style="color: cadetblue;"><b><u>
+    Personal Information</u></b></div>
+Phone Number:<div id="phnum"></div>
+Email Id:<div id="mailid"></div>
+Adress:<div id="address"></div>
+<div style="color: cadetblue;"><b><u>Educational Qualifications</u></b></div>
+Class 12th Percentage:<div id="mark12"></div>
+Class 10th Percentage:<div id="mark10"></div>
+
+<script>
+// const accValues=localStorage.getItem('gehjgj')
+// const queryString=window.location.search
+// const urlParams=new URLSearchParams(queryString)
+// console.log(urlParams.get('fname'))
+// document.getElementById('name').innerHTML=urlParams.get('fname')
+
+str=window.location.search
+        str=str.substring(1)
+        str1=str.split("&")
+        document.getElementById("fname").innerHTML=str1[0].split("=")[1]
+        document.getElementById("lname").innerHTML=str1[1].split("=")[1]
+        document.getElementById("roll").innerHTML=str1[2].split("=")[1]
+        document.getElementById("phnum").innerHTML=str1[3].split("=")[1]
+        document.getElementById("mailid").innerHTML=str1[4].split("=")[1]
+        document.getElementById("address").innerHTML=str1[5].split("=")[1]
+        document.getElementById("mark12").innerHTML=str1[6].split("=")[1]
+        document.getElementById("mark10").innerHTML=str1[6].split("=")[1]
+    //document.getElementById("demo").innerHTML=str
+</script>
+</body>
+</html>
